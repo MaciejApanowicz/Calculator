@@ -17,11 +17,11 @@ public class MainController {
         createMenu();
     }
 
-    public void createMenu() {
+    private void createMenu() {
         int choose;
 
         do {
-            // show Menu to the user
+            userView.showMenu();
             choose = scanner.nextInt();
 
             switch (choose) {
@@ -66,15 +66,14 @@ public class MainController {
                     break;
                 }
                 default: {
-                    // display a message to the User to choose correctly
+                    // display a message to the User to choose correctly (number from 1-10)
                     break;
                 }
 
             }
         }
-        while (choose != 10);
-        {
-            // create a leaving program
+        while (choose != 10);{
+            userView.leavingMessage();
         }
 
     }
