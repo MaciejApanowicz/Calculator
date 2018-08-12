@@ -1,15 +1,18 @@
 package controller;
 
+import model.Calculations;
 import view.UserView;
 import java.util.Scanner;
 
 public class MainController {
     private UserView userView;
     private Scanner scanner;
+    private Calculations calculations;
 
     public MainController() {
         userView = new UserView();
         scanner = new Scanner(System.in);
+        calculations = new Calculations();
     }
 
     public void start() {
@@ -19,14 +22,13 @@ public class MainController {
 
     private void createMenu() {
         int choose;
-
         do {
             userView.showMenu();
             choose = scanner.nextInt();
 
             switch (choose) {
                 case 1: {
-                    //operation 1
+                    calculations.multiplyNumbers();
                     break;
                 }
                 case 2: {
