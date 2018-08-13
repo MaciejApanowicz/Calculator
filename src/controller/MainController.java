@@ -32,7 +32,7 @@ public class MainController {
                     break;
                 }
                 case 2: {
-                    //operation 2
+                    calculations.divideNumbers();
                     break;
                 }
                 case 3: {

@@ -25,4 +25,17 @@ public class UserView {
         System.out.println("Thanks for testing !!!");
     }
 
+    public void messageAfterChoosingOperation1 (){
+        System.out.println("You have chosen to multiply!");
+    }
+    public void messageAfterChoosingOperation2 () {
+        System.out.println("You have chosen to divide!");
+    }
+    public void messageDoNotDivideBy0 () {
+        System.out.println("It is not allowed to divide by 0 !!!  Set your second number again: ");
+    }
+    public void displayResult (double result){
+        System.out.println("Result is: " + result + '\n');
+    }
+
 }

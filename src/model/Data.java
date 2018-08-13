@@ -25,5 +25,4 @@ class Data {
         System.out.println("Set your second number: ");
         this.secondNumber = Double.parseDouble(scanner.nextLine());
     }
-
 }
