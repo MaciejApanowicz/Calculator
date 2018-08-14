@@ -31,11 +31,27 @@ public class UserView {
     public void messageAfterChoosingOperation2 () {
         System.out.println("You have chosen to divide!");
     }
+    public void messageAfterChoosingOperation3 () {
+        System.out.println("You have chosen exponentiation!");
+    }
+
     public void messageDoNotDivideBy0 () {
         System.out.println("It is not allowed to divide by 0 !!!  Set your second number again: ");
     }
     public void displayResult (double result){
         System.out.println("Result is: " + result + '\n');
+    }
+
+    public void askUserForTheBase(){
+        System.out.println("Set the number to be a base of exponentiation: ");
+    }
+
+    public void askUserForPower(){
+        System.out.println("Set the power: ");
+    }
+
+    public void askUserForTheNumberToBeSquareRooted() {
+        System.out.println("Set the number to be square rooted: ");
     }
 
 }

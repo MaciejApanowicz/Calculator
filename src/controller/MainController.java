@@ -25,7 +25,6 @@ public class MainController {
         do {
             userView.showMenu();
             choose = scanner.nextInt();
-
             switch (choose) {
                 case 1: {
                     calculations.multiplyNumbers();
@@ -36,11 +35,11 @@ public class MainController {
                     break;
                 }
                 case 3: {
-                    //operation 3
+                    calculations.exponentiation();
                     break;
                 }
                 case 4: {
-                    //operation 4
+                    calculations.squareRootExtraction();
                     break;
                 }
                 case 5: {

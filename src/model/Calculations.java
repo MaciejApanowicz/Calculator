@@ -28,4 +28,22 @@ public class Calculations {
         double result = (data.getFirstNumber() / data.getSecondNumber());
         userView.displayResult(result);
     }
+
+    public void exponentiation (){
+        userView.messageAfterChoosingOperation3();
+        data.setNumberToBeBaseForExponentiation();
+        data.setPower();
+        int result = 1;
+        for (int i = 1; i <= data.getSecondNumber(); i++) {
+            result *= data.getFirstNumber();
+        }
+        userView.displayResult(result);
+    }
+
+    public void squareRootExtraction (){
+        data.setNumberToBeSquareRooted();
+        double result = Math.sqrt(data.getFirstNumber());
+        userView.displayResult(result);
+    }
+
 }
