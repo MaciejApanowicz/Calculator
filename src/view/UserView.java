@@ -20,11 +20,9 @@ public class UserView {
     public void welcomeMessage () {
         System.out.println("Welcome. This is the Calculator. Enjoy! ");
     }
-
     public void leavingMessage (){
         System.out.println("Thanks for testing !!!");
     }
-
     public void messageAfterChoosingOperation1 (){
         System.out.println("You have chosen to multiply!");
     }
@@ -34,24 +32,29 @@ public class UserView {
     public void messageAfterChoosingOperation3 () {
         System.out.println("You have chosen exponentiation!");
     }
-
+    public void messageAfterChoosingOperation5 () {
+        System.out.println("You have chosen converting the integer to a binary number!");
+    }
     public void messageDoNotDivideBy0 () {
         System.out.println("It is not allowed to divide by 0 !!!  Set your second number again: ");
     }
     public void displayResult (double result){
         System.out.println("Result is: " + result + '\n');
     }
-
+    public void displayResultAsString (String result){
+        System.out.println("Result is: " + result + '\n');
+    }
     public void askUserForTheBase(){
         System.out.println("Set the number to be a base of exponentiation: ");
     }
-
     public void askUserForPower(){
         System.out.println("Set the power: ");
     }
-
     public void askUserForTheNumberToBeSquareRooted() {
         System.out.println("Set the number to be square rooted: ");
     }
-
+    public void askUserForIntegerToBeConvertedToBinary(){
+        System.out.println("Set the integer to convert: ");
+    }
+    
 }

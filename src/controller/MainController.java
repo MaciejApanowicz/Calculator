@@ -43,7 +43,7 @@ public class MainController {
                     break;
                 }
                 case 5: {
-                    //operation 5
+                    calculations.integerToBinary();
                     break;
                 }
                 case 6: {

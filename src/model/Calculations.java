@@ -46,4 +46,17 @@ public class Calculations {
         userView.displayResult(result);
     }
 
+    public void integerToBinary() {
+        userView.messageAfterChoosingOperation5();
+        data.setIntegerToBeConvertedToBinary();
+        StringBuilder binaryNumber = new StringBuilder();
+        int integerNumber = (int)data.getFirstNumber();
+        while (integerNumber != 0) {
+            binaryNumber.append(integerNumber % 2);
+            integerNumber /= 2;
+        }
+        String result = binaryNumber.reverse().toString();
+        userView.displayResultAsString(result);
+    }
+
 }
