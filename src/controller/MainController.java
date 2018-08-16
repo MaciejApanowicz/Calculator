@@ -47,27 +47,15 @@ public class MainController {
                     break;
                 }
                 case 6: {
-                    //operation 6
-                    break;
-                }
-                case 7: {
-                    //operation 7
-                    break;
-                }
-                case 8: {
-                    //operation 8
-                    break;
-                }
-                case 9: {
-                    //operation 9
+                    calculations.binaryToInteger();
                     break;
                 }
                 case 10: {
-                    //this will close the program
+                    userView.messageAfterChoosingOperation10();
                     break;
                 }
                 default: {
-                    // display a message to the User to choose correctly (number from 1-10)
+                    userView.instructUserToChooseCorrectly();
                     break;
                 }
 
@@ -76,6 +64,5 @@ public class MainController {
         while (choose != 10);{
             userView.leavingMessage();
         }
-
     }
 }

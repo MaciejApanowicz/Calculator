@@ -59,4 +59,21 @@ public class Calculations {
         userView.displayResultAsString(result);
     }
 
+    public void binaryToInteger(){
+        userView.messageAfterChoosingOperation6();
+        data.setBinaryNumberToBeConvertedOnInteger();
+        int numberToBeConverted = (int)data.getFirstNumber();
+        String binaryNumber = Integer.toString(numberToBeConverted);
+        int integerNumber = 0;
+        int power = 0;
+        for (int i = binaryNumber.length(); i >= 1; i--) {
+            if (binaryNumber.charAt(i - 1) == 49) {
+                integerNumber += Math.pow(2,power);
+            }
+            power++;
+        }
+        int result = integerNumber;
+        userView.displayResultAsInt(result);
+    }
+
 }

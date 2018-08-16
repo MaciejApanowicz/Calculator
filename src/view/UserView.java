@@ -35,10 +35,22 @@ public class UserView {
     public void messageAfterChoosingOperation5 () {
         System.out.println("You have chosen converting the integer to a binary number!");
     }
+    public void messageAfterChoosingOperation6 () {
+        System.out.println("You have chosen converting the binary number to an integer");
+    }
+    public void messageAfterChoosingOperation10 () {
+        System.out.println("You have exited the program.");
+    }
+    public void instructUserToChooseCorrectly() {
+        System.out.println("Please choose correct number from 1 to 10");
+    }
     public void messageDoNotDivideBy0 () {
         System.out.println("It is not allowed to divide by 0 !!!  Set your second number again: ");
     }
     public void displayResult (double result){
+        System.out.println("Result is: " + result + '\n');
+    }
+    public void displayResultAsInt (int result){
         System.out.println("Result is: " + result + '\n');
     }
     public void displayResultAsString (String result){
@@ -56,5 +68,8 @@ public class UserView {
     public void askUserForIntegerToBeConvertedToBinary(){
         System.out.println("Set the integer to convert: ");
     }
-    
+    public void askUserForBinaryNumberToBeConvertedOnInteger(){
+        System.out.println("Type binary number to be converted on integer: ");
+    }
+
 }

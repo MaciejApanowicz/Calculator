@@ -47,4 +47,9 @@ class Data {
         this.firstNumber = Integer.parseInt(scanner.nextLine());
     }
 
+    void setBinaryNumberToBeConvertedOnInteger() {
+        userView.askUserForBinaryNumberToBeConvertedOnInteger();
+        this.firstNumber = Double.parseDouble(scanner.nextLine());
+    }
+
 }
