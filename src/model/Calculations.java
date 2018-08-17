@@ -76,4 +76,21 @@ public class Calculations {
         userView.displayResultAsInt(result);
     }
 
+    public void GCD (){
+        userView.messageAfterChoosingOperation7();
+        data.setFirstNumber();
+        int gcdNumber1 = (int) data.getFirstNumber();
+        data.setSecondNumber();
+        int gcdNumber2 = (int) data.getSecondNumber();
+        while (gcdNumber1 != gcdNumber2)
+        {
+            if (gcdNumber1 > gcdNumber2){
+                gcdNumber1 -= gcdNumber2;
+            } else {
+                gcdNumber2 -= gcdNumber1;
+            }
+        }
+        int result = gcdNumber1;
+        userView.displayResultAsInt(result);
+    }
 }

@@ -38,6 +38,9 @@ public class UserView {
     public void messageAfterChoosingOperation6 () {
         System.out.println("You have chosen converting the binary number to an integer");
     }
+    public void messageAfterChoosingOperation7 () {
+        System.out.println("You have chosen calculating Greatest Common Divisor (GCD)");
+    }
     public void messageAfterChoosingOperation10 () {
         System.out.println("You have exited the program.");
     }

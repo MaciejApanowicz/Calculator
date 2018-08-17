@@ -51,5 +51,4 @@ class Data {
         userView.askUserForBinaryNumberToBeConvertedOnInteger();
         this.firstNumber = Double.parseDouble(scanner.nextLine());
     }
-
 }

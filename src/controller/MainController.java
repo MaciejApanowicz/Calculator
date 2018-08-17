@@ -50,6 +50,10 @@ public class MainController {
                     calculations.binaryToInteger();
                     break;
                 }
+                case 7: {
+                    calculations.GCD();
+                    break;
+                }
                 case 10: {
                     userView.messageAfterChoosingOperation10();
                     break;
@@ -58,7 +62,6 @@ public class MainController {
                     userView.instructUserToChooseCorrectly();
                     break;
                 }
-
             }
         }
         while (choose != 10);{
