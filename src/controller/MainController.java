@@ -54,6 +54,14 @@ public class MainController {
                     calculations.GCD();
                     break;
                 }
+                case 8: {
+                    calculations.calculateAverage();
+                    break;
+                }
+                case 9: {
+                    calculations.isThereNumberInCollectionGreaterThanTheSumOfTheRest();
+                    break;
+                }
                 case 10: {
                     userView.messageAfterChoosingOperation10();
                     break;

@@ -8,6 +8,9 @@ class Data {
     private double secondNumber;
     private Scanner scanner = new Scanner(System.in);
     private UserView userView = new UserView();
+    int[] arrayNumbers;
+    int arrayLength;
+
 
     double getFirstNumber() {
         return firstNumber;
@@ -18,12 +21,12 @@ class Data {
     }
 
     void setFirstNumber() {
-        System.out.println("Set your first number: ");
+        userView.setFirstNumber();
         this.firstNumber = Double.parseDouble(scanner.nextLine());
     }
 
     void setSecondNumber() {
-        System.out.println("Set your second number: ");
+        userView.setSecondNumber();
         this.secondNumber = Double.parseDouble(scanner.nextLine());
     }
 
@@ -51,4 +54,27 @@ class Data {
         userView.askUserForBinaryNumberToBeConvertedOnInteger();
         this.firstNumber = Double.parseDouble(scanner.nextLine());
     }
+
+    void setArraylength() {
+        userView.setArrayLength();
+        this.arrayLength = Integer.parseInt(scanner.nextLine());
+    }
+    void addNumbers() {
+        this.arrayNumbers = new int[arrayLength];
+        for (int i = 0; i < arrayLength; i++) {
+            if (arrayNumbers[i] == 0) {
+                System.out.println("Type " + (i + 1) + " number : ");
+                arrayNumbers[i] = scanner.nextInt();
+            }
+        }
+    }
+
+    void showArrayNumbers(){
+        userView.showArrayNumbers();
+        for(int i : arrayNumbers){
+            System.out.print(i + "\t");
+        }
+        System.out.println();
+    }
+
 }

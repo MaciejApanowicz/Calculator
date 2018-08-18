@@ -74,5 +74,16 @@ public class UserView {
     public void askUserForBinaryNumberToBeConvertedOnInteger(){
         System.out.println("Type binary number to be converted on integer: ");
     }
-
+    public void setFirstNumber() {
+        System.out.println("Set your first number: ");
+    }
+    public void setSecondNumber() {
+        System.out.println("Set your second number: ");
+    }
+    public void setArrayLength() {
+        System.out.println("How many numbers do you want to have?: ");
+    }
+    public void showArrayNumbers() {
+        System.out.println("Here is your collection: ");
+    }
 }

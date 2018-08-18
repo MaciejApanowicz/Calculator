@@ -93,4 +93,36 @@ public class Calculations {
         int result = gcdNumber1;
         userView.displayResultAsInt(result);
     }
+
+    public void calculateAverage(){
+        data.setArraylength();
+        data.addNumbers();
+        data.showArrayNumbers();
+
+        int sum = 0;
+        for (int number : data.arrayNumbers) {
+            sum += number;
+        }
+        int result = sum/data.arrayLength;
+        userView.displayResultAsInt(result);
+    }
+
+    public void isThereNumberInCollectionGreaterThanTheSumOfTheRest(){
+        data.setArraylength();
+        data.addNumbers();
+        data.showArrayNumbers();
+
+        int sum1 = 0;
+        int max = 0;
+        for (int i = 0; i < data.arrayLength; i++) {
+            max = max < data.arrayNumbers[i] ? data.arrayNumbers[i] : max;
+            sum1 += data.arrayNumbers[i];
+        }
+        if (max > sum1-max) {
+            System.out.println("Yes, within collection there is a number, that is greater than the sum of the rest" + '\n');
+        } else {
+            System.out.println("No, within that collection none number is greater than the sum of the rest" + '\n');
+        }
+    }
+
 }
