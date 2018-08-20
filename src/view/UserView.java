@@ -40,6 +40,7 @@ public class UserView {
     }
     public void messageAfterChoosingOperation7 () {
         System.out.println("You have chosen calculating Greatest Common Divisor (GCD)");
+        System.out.println("Now, you can find the GCD of the two integers");
     }
     public void messageAfterChoosingOperation10 () {
         System.out.println("You have exited the program.");
@@ -63,7 +64,7 @@ public class UserView {
         System.out.println("Set the number to be a base of exponentiation: ");
     }
     public void askUserForPower(){
-        System.out.println("Set the power: ");
+        System.out.println("Set the power: (set an integer) ");
     }
     public void askUserForTheNumberToBeSquareRooted() {
         System.out.println("Set the number to be square rooted: ");
@@ -72,7 +73,7 @@ public class UserView {
         System.out.println("Set the integer to convert: ");
     }
     public void askUserForBinaryNumberToBeConvertedOnInteger(){
-        System.out.println("Type binary number to be converted on integer: ");
+        System.out.println("Type a positive binary number to be converted on integer: ");
     }
     public void setFirstNumber() {
         System.out.println("Set your first number: ");
@@ -80,7 +81,7 @@ public class UserView {
     public void setSecondNumber() {
         System.out.println("Set your second number: ");
     }
-    public void setArrayLength() {
+    public void askForArrayLength() {
         System.out.println("How many numbers do you want to have?: ");
     }
     public void showArrayNumbers() {

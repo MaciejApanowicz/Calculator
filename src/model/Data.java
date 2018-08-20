@@ -22,48 +22,48 @@ class Data {
 
     void setFirstNumber() {
         userView.setFirstNumber();
-        this.firstNumber = Double.parseDouble(scanner.nextLine());
+        this.firstNumber = scanner.nextDouble();
     }
 
     void setSecondNumber() {
         userView.setSecondNumber();
-        this.secondNumber = Double.parseDouble(scanner.nextLine());
+        this.secondNumber = scanner.nextDouble();
     }
 
     void setNumberToBeBaseForExponentiation() {
         userView.askUserForTheBase();
-        this.firstNumber = Double.parseDouble(scanner.nextLine());
+        this.firstNumber = scanner.nextDouble();
     }
 
     void setPower() {
         userView.askUserForPower();
-        this.secondNumber = Double.parseDouble(scanner.nextLine());
+        this.secondNumber = scanner.nextDouble();
     }
 
     void setNumberToBeSquareRooted() {
         userView.askUserForTheNumberToBeSquareRooted();
-        this.firstNumber = Double.parseDouble(scanner.nextLine());
+        this.firstNumber = scanner.nextDouble();
     }
 
     void setIntegerToBeConvertedToBinary() {
         userView.askUserForIntegerToBeConvertedToBinary();
-        this.firstNumber = Integer.parseInt(scanner.nextLine());
+        this.firstNumber = scanner.nextInt();
     }
 
     void setBinaryNumberToBeConvertedOnInteger() {
         userView.askUserForBinaryNumberToBeConvertedOnInteger();
-        this.firstNumber = Double.parseDouble(scanner.nextLine());
+        this.firstNumber = scanner.nextDouble();
     }
 
-    void setArraylength() {
-        userView.setArrayLength();
-        this.arrayLength = Integer.parseInt(scanner.nextLine());
+    void setArrayLength() {
+        userView.askForArrayLength();
+        this.arrayLength = scanner.nextInt();
     }
     void addNumbers() {
         this.arrayNumbers = new int[arrayLength];
         for (int i = 0; i < arrayLength; i++) {
             if (arrayNumbers[i] == 0) {
-                System.out.println("Type " + (i + 1) + " number : ");
+                System.out.println("Type " + (i + 1) + " number (type an integer and press enter): ");
                 arrayNumbers[i] = scanner.nextInt();
             }
         }

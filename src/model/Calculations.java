@@ -95,7 +95,7 @@ public class Calculations {
     }
 
     public void calculateAverage(){
-        data.setArraylength();
+        data.setArrayLength();
         data.addNumbers();
         data.showArrayNumbers();
 
@@ -108,7 +108,7 @@ public class Calculations {
     }
 
     public void isThereNumberInCollectionGreaterThanTheSumOfTheRest(){
-        data.setArraylength();
+        data.setArrayLength();
         data.addNumbers();
         data.showArrayNumbers();
 
