@@ -48,7 +48,7 @@ public class UserView {
     public void instructUserToChooseCorrectly() {
         System.out.println("Please choose correct number from 1 to 10");
     }
-    public void messageDoNotDivideBy0 () {
+    public static void messageDoNotDivideBy0 () {
         System.out.println("It is not allowed to divide by 0 !!!  Set your second number again: ");
     }
     public void displayResult (double result){
@@ -59,6 +59,12 @@ public class UserView {
     }
     public void displayResultAsString (String result){
         System.out.println("Result is: " + result + '\n');
+    }
+    public void displayResultOperationNo9WhenPositive(){
+        System.out.println("Yes, within collection there is a number, that is greater than the sum of the rest" + '\n');
+    }
+    public void displayResultOperationNo9WhenNegative(){
+        System.out.println("No, within that collection none number is greater than the sum of the rest" + '\n');
     }
     public void askUserForTheBase(){
         System.out.println("Set the number to be a base of exponentiation: ");

@@ -1,53 +1,46 @@
 package model;
 
-import view.UserView;
-
 public class Calculations {
     private Data data = new Data();
-    private UserView userView = new UserView();
+    private double result;
+    private String resultAsString;
+    private int resultAsInt;
 
 
     public void multiplyNumbers(){
-        userView.messageAfterChoosingOperation1();
         data.setFirstNumber();
         data.setSecondNumber();
-        double result = (data.getFirstNumber()* data.getSecondNumber());
-        userView.displayResult(result);
+        this.result = (data.getFirstNumber()* data.getSecondNumber());
     }
 
     public void divideNumbers(){
-        userView.messageAfterChoosingOperation2();
         data.setFirstNumber();
         data.setSecondNumber();
         do {
             if (data.getSecondNumber() == 0) {
-                userView.messageDoNotDivideBy0();
+                //UserView.messageDoNotDivideBy0();
                 data.setSecondNumber();
             }
         } while (data.getSecondNumber() == 0);
-        double result = (data.getFirstNumber() / data.getSecondNumber());
-        userView.displayResult(result);
+        this.result = (data.getFirstNumber() / data.getSecondNumber());
     }
 
     public void exponentiation (){
-        userView.messageAfterChoosingOperation3();
         data.setNumberToBeBaseForExponentiation();
         data.setPower();
         int result = 1;
         for (int i = 1; i <= data.getSecondNumber(); i++) {
             result *= data.getFirstNumber();
         }
-        userView.displayResult(result);
+        this.result=result;
     }
 
     public void squareRootExtraction (){
         data.setNumberToBeSquareRooted();
-        double result = Math.sqrt(data.getFirstNumber());
-        userView.displayResult(result);
+        this.result = Math.sqrt(data.getFirstNumber());
     }
 
     public void integerToBinary() {
-        userView.messageAfterChoosingOperation5();
         data.setIntegerToBeConvertedToBinary();
         StringBuilder binaryNumber = new StringBuilder();
         int integerNumber = (int)data.getFirstNumber();
@@ -55,12 +48,10 @@ public class Calculations {
             binaryNumber.append(integerNumber % 2);
             integerNumber /= 2;
         }
-        String result = binaryNumber.reverse().toString();
-        userView.displayResultAsString(result);
+        this.resultAsString= binaryNumber.reverse().toString();
     }
 
     public void binaryToInteger(){
-        userView.messageAfterChoosingOperation6();
         data.setBinaryNumberToBeConvertedOnInteger();
         int numberToBeConverted = (int)data.getFirstNumber();
         String binaryNumber = Integer.toString(numberToBeConverted);
@@ -72,12 +63,10 @@ public class Calculations {
             }
             power++;
         }
-        int result = integerNumber;
-        userView.displayResultAsInt(result);
+        this.resultAsInt= integerNumber;
     }
 
     public void GCD (){
-        userView.messageAfterChoosingOperation7();
         data.setFirstNumber();
         int gcdNumber1 = (int) data.getFirstNumber();
         data.setSecondNumber();
@@ -90,8 +79,7 @@ public class Calculations {
                 gcdNumber2 -= gcdNumber1;
             }
         }
-        int result = gcdNumber1;
-        userView.displayResultAsInt(result);
+        this.resultAsInt = gcdNumber1;
     }
 
     public void calculateAverage(){
@@ -103,8 +91,7 @@ public class Calculations {
         for (int number : data.arrayNumbers) {
             sum += number;
         }
-        int result = sum/data.arrayLength;
-        userView.displayResultAsInt(result);
+        this.result = (double)sum/data.arrayLength;
     }
 
     public void isThereNumberInCollectionGreaterThanTheSumOfTheRest(){
@@ -119,10 +106,20 @@ public class Calculations {
             sum1 += data.arrayNumbers[i];
         }
         if (max > sum1-max) {
-            System.out.println("Yes, within collection there is a number, that is greater than the sum of the rest" + '\n');
+            this.resultAsString = "yes";
         } else {
-            System.out.println("No, within that collection none number is greater than the sum of the rest" + '\n');
+            this.resultAsString = "no";
         }
     }
+    public double getResult(){
+        return result;
+    }
 
+    public String getResultAsString() {
+        return resultAsString;
+    }
+
+    public int getResultAsInt() {
+        return resultAsInt;
+    }
 }
