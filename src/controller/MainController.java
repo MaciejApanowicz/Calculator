@@ -1,5 +1,6 @@
 package controller;
 
+import helpers.UserCalculationsHelper;
 import model.Calculations;
 import view.UserView;
 import java.util.Scanner;
@@ -8,11 +9,13 @@ public class MainController {
     private UserView userView;
     private Scanner scanner;
     private Calculations calculations;
+    private UserCalculationsHelper helper;
 
     public MainController() {
         userView = new UserView();
         scanner = new Scanner(System.in);
         calculations = new Calculations();
+        helper = new UserCalculationsHelper(userView,scanner,calculations);
     }
 
     public void start() {
@@ -27,9 +30,14 @@ public class MainController {
             choose = scanner.nextInt();
             switch (choose) {
                 case 1: {
-                    userView.messageAfterChoosingOperation1();
-                    calculations.multiplyNumbers();
-                    userView.displayResult(calculations.getResult());
+                   userView.messageAfterChoosingOperation1();
+                    userView.setFirstNumber();
+                    double firstNumber = scanner.nextDouble();
+                    userView.setSecondNumber();
+                    double secondNumber = scanner.nextDouble();
+                    helper.multiplyNumbers(); //null pointer exeption
+                    //calculations.multiplyNumbers(firstNumber,secondNumber);
+                    userView.displayResult(helper.multiplyNumbers());
                     break;
                 }
                 case 2: {

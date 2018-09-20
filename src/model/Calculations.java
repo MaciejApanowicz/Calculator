@@ -7,10 +7,10 @@ public class Calculations {
     private int resultAsInt;
 
 
-    public void multiplyNumbers(){
-        data.setFirstNumber();
-        data.setSecondNumber();
-        this.result = (data.getFirstNumber()* data.getSecondNumber());
+    public double multiplyNumbers(double firstNumber, double secondNumber){
+//        data.setFirstNumber();
+//        data.setSecondNumber();
+        return  (firstNumber* secondNumber);
     }
 
     public void divideNumbers(){
