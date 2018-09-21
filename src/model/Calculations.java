@@ -1,60 +1,49 @@
 package model;
 
 public class Calculations {
-    private Data data = new Data();
     private double result;
     private String resultAsString;
     private int resultAsInt;
 
 
     public double multiplyNumbers(double firstNumber, double secondNumber){
-//        data.setFirstNumber();
-//        data.setSecondNumber();
         return  (firstNumber* secondNumber);
     }
 
-    public void divideNumbers(){
-        data.setFirstNumber();
-        data.setSecondNumber();
-        do {
-            if (data.getSecondNumber() == 0) {
-                //UserView.messageDoNotDivideBy0();
-                data.setSecondNumber();
-            }
-        } while (data.getSecondNumber() == 0);
-        this.result = (data.getFirstNumber() / data.getSecondNumber());
-    }
-
-    public void exponentiation (){
-        data.setNumberToBeBaseForExponentiation();
-        data.setPower();
-        int result = 1;
-        for (int i = 1; i <= data.getSecondNumber(); i++) {
-            result *= data.getFirstNumber();
+    public double divideNumbers(double firstNumber, double secondNumber) throws ArithmeticException{
+        if (secondNumber == 0) {
+            throw new ArithmeticException("Do not divide by zero");
         }
-        this.result=result;
+        return (firstNumber/secondNumber);
     }
 
-    public void squareRootExtraction (){
-        data.setNumberToBeSquareRooted();
-        this.result = Math.sqrt(data.getFirstNumber());
+    public double exponentiation (double base, double power){
+        int result = 1;
+        for (int i = 1; i <= power; i++) {
+            result *= base;
+        }
+        return result;
     }
 
-    public void integerToBinary() {
-        data.setIntegerToBeConvertedToBinary();
+    public double squareRootExtraction (double numberToBeSquareRooted){
+        return result = Math.sqrt(numberToBeSquareRooted);
+    }
+
+    public String integerToBinary(int integerToBeConvertedToBinary) {
         StringBuilder binaryNumber = new StringBuilder();
-        int integerNumber = (int)data.getFirstNumber();
+        int integerNumber = integerToBeConvertedToBinary;
+        if (integerToBeConvertedToBinary == 0){
+             return resultAsString = "0";
+        }else {
         while (integerNumber != 0) {
             binaryNumber.append(integerNumber % 2);
             integerNumber /= 2;
-        }
-        this.resultAsString= binaryNumber.reverse().toString();
+        }return resultAsString= binaryNumber.reverse().toString();
+    }
     }
 
-    public void binaryToInteger(){
-        data.setBinaryNumberToBeConvertedOnInteger();
-        int numberToBeConverted = (int)data.getFirstNumber();
-        String binaryNumber = Integer.toString(numberToBeConverted);
+    public int binaryToInteger(int binaryNumberToBeConvertedOnInteger){
+        String binaryNumber = Integer.toString(binaryNumberToBeConvertedOnInteger);
         int integerNumber = 0;
         int power = 0;
         for (int i = binaryNumber.length(); i >= 1; i--) {
@@ -63,56 +52,41 @@ public class Calculations {
             }
             power++;
         }
-        this.resultAsInt= integerNumber;
+        return resultAsInt= integerNumber;
     }
 
-    public void GCD (){
-        data.setFirstNumber();
-        int gcdNumber1 = (int) data.getFirstNumber();
-        data.setSecondNumber();
-        int gcdNumber2 = (int) data.getSecondNumber();
-        while (gcdNumber1 != gcdNumber2)
+    public int GCD (int firstNumber, int secondNumber){
+        while (firstNumber != secondNumber)
         {
-            if (gcdNumber1 > gcdNumber2){
-                gcdNumber1 -= gcdNumber2;
+            if (firstNumber > secondNumber){
+                firstNumber -= secondNumber;
             } else {
-                gcdNumber2 -= gcdNumber1;
+                secondNumber -= firstNumber;
             }
         }
-        this.resultAsInt = gcdNumber1;
+        return resultAsInt = firstNumber;
     }
 
-    public void calculateAverage(){
-        data.setArrayLength();
-        data.addNumbers();
-        data.showArrayNumbers();
-
+    public double calculateAverage(int [] arrayNumbers, int arrayLength ){
         int sum = 0;
-        for (int number : data.arrayNumbers) {
+        for (int number : arrayNumbers) {
             sum += number;
         }
-        this.result = (double)sum/data.arrayLength;
+         return result = (double)sum/arrayLength;
     }
 
-    public void isThereNumberInCollectionGreaterThanTheSumOfTheRest(){
-        data.setArrayLength();
-        data.addNumbers();
-        data.showArrayNumbers();
-
+    public String isThereNumberInCollectionGreaterThanTheSumOfTheRest(int [] arrayNumbers, int arrayLength){
         int sum1 = 0;
         int max = 0;
-        for (int i = 0; i < data.arrayLength; i++) {
-            max = max < data.arrayNumbers[i] ? data.arrayNumbers[i] : max;
-            sum1 += data.arrayNumbers[i];
+        for (int i = 0; i < arrayLength; i++) {
+            max = max < arrayNumbers[i] ? arrayNumbers[i] : max;
+            sum1 += arrayNumbers[i];
         }
         if (max > sum1-max) {
-            this.resultAsString = "yes";
+            return resultAsString = "yes";
         } else {
-            this.resultAsString = "no";
+            return resultAsString = "no";
         }
-    }
-    public double getResult(){
-        return result;
     }
 
     public String getResultAsString() {

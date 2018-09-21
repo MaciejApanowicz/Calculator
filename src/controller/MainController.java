@@ -1,6 +1,6 @@
 package controller;
 
-import helpers.UserCalculationsHelper;
+import helper.UserCalculationsHelper;
 import model.Calculations;
 import view.UserView;
 import java.util.Scanner;
@@ -30,59 +30,39 @@ public class MainController {
             choose = scanner.nextInt();
             switch (choose) {
                 case 1: {
-                   userView.messageAfterChoosingOperation1();
-                    userView.setFirstNumber();
-                    double firstNumber = scanner.nextDouble();
-                    userView.setSecondNumber();
-                    double secondNumber = scanner.nextDouble();
-                    helper.multiplyNumbers(); //null pointer exeption
-                    //calculations.multiplyNumbers(firstNumber,secondNumber);
                     userView.displayResult(helper.multiplyNumbers());
                     break;
                 }
                 case 2: {
-                    userView.messageAfterChoosingOperation2();
-                    calculations.divideNumbers();
-                    userView.displayResult(calculations.getResult());
+                    userView.displayResult(helper.divideNumbers());
                     break;
                 }
                 case 3: {
-                    userView.messageAfterChoosingOperation3();
-                    calculations.exponentiation();
-                    userView.displayResult(calculations.getResult());
+                    userView.displayResult(helper.exponentiation());
                     break;
                 }
                 case 4: {
-                    calculations.squareRootExtraction();
-                    userView.displayResult(calculations.getResult());
+                    userView.displayResult(helper.squareRootExtraction());
                     break;
                 }
                 case 5: {
-                    userView.messageAfterChoosingOperation5();
-                    calculations.integerToBinary();
-                    userView.displayResultAsString(calculations.getResultAsString());
+                    userView.displayResultAsString(helper.integerToBinary());
                     break;
                 }
                 case 6: {
-                    userView.messageAfterChoosingOperation6();
-                    calculations.binaryToInteger();
-                    userView.displayResultAsInt(calculations.getResultAsInt());
+                    userView.displayResultAsInt(helper.binaryToInteger());
                     break;
                 }
                 case 7: {
-                    userView.messageAfterChoosingOperation7();
-                    calculations.GCD();
-                    userView.displayResultAsInt(calculations.getResultAsInt());
+                    userView.displayResultAsInt(helper.GCD());
                     break;
                 }
                 case 8: {
-                    calculations.calculateAverage();
-                    userView.displayResult(calculations.getResult());
+                    userView.displayResult(helper.calculateAverage());
                     break;
                 }
                 case 9: {
-                    calculations.isThereNumberInCollectionGreaterThanTheSumOfTheRest();
-                    if (calculations.getResultAsString().equals("yes")) {
+                    if (helper.isThereNumberInCollectionGreaterThanTheSumOfTheRest().equals("yes")) {
                         userView.displayResultOperationNo9WhenPositive();
                     } else userView.displayResultOperationNo9WhenNegative();
                     break;
