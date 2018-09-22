@@ -11,7 +11,7 @@ public class UserCalculationsHelper {
     private final Scanner scanner;
     private final Calculations calculations;
     private int[] arrayNumbers;
-    int arrayLength;
+    private int arrayLength;
 
     public UserCalculationsHelper(UserView userView, Scanner scanner, Calculations calculations){
         this.userView = userView;
@@ -94,6 +94,7 @@ public class UserCalculationsHelper {
             }
         }
     }
+
     private void showArrayNumbers(){
         userView.showArrayNumbers();
         for(int i : arrayNumbers){
@@ -101,6 +102,7 @@ public class UserCalculationsHelper {
         }
         System.out.println();
     }
+
     private void setArrayLength() {
         userView.askForArrayLength();
         this.arrayLength = scanner.nextInt();

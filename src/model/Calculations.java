@@ -1,10 +1,11 @@
 package model;
 
+import view.UserView;
+
 public class Calculations {
     private double result;
     private String resultAsString;
     private int resultAsInt;
-
 
     public double multiplyNumbers(double firstNumber, double secondNumber){
         return  (firstNumber* secondNumber);
@@ -12,7 +13,7 @@ public class Calculations {
 
     public double divideNumbers(double firstNumber, double secondNumber) throws ArithmeticException{
         if (secondNumber == 0) {
-            throw new ArithmeticException("Do not divide by zero");
+            throw new ArithmeticException(UserView.messageDoNotDivideBy0());
         }
         return (firstNumber/secondNumber);
     }
@@ -87,13 +88,5 @@ public class Calculations {
         } else {
             return resultAsString = "no";
         }
-    }
-
-    public String getResultAsString() {
-        return resultAsString;
-    }
-
-    public int getResultAsInt() {
-        return resultAsInt;
     }
 }

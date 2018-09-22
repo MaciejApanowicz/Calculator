@@ -8,14 +8,13 @@ import java.util.Scanner;
 public class MainController {
     private UserView userView;
     private Scanner scanner;
-    private Calculations calculations;
     private UserCalculationsHelper helper;
 
     public MainController() {
         userView = new UserView();
         scanner = new Scanner(System.in);
-        calculations = new Calculations();
-        helper = new UserCalculationsHelper(userView,scanner,calculations);
+        Calculations calculations = new Calculations();
+        helper = new UserCalculationsHelper(userView,scanner, calculations);
     }
 
     public void start() {
